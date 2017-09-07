@@ -1,6 +1,6 @@
 # clojure-chatter2
 
-FIXME
+Web app to display messages.
 
 ## Prerequisites
 
@@ -16,4 +16,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 clojurebridgemn.org
