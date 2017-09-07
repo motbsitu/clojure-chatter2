@@ -2,7 +2,8 @@
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [hiccup.page :as page]))
+            [hiccup.page :as page]
+            [hiccup.form :as form]))
 
       (defn generate-message-view
         "This generates the HTML for displaying messages"
@@ -12,7 +13,15 @@
           [:title "chatter"]]
          [:body
           [:h1 "Our Chat App"]
-          [:p (str messages)]]))
+          [:p
+          (form/form-to
+            [:post "/"]
+            "Name: " (form/text-field "name")
+            "Message: " (form/text-field "msg")
+            (form/submit-button "Submit"))]
+          [:p
+          [:table
+            (map (fn [m] [:tr [:td (:name m)] [:td (:message m)]]) messages)]]]))
 
 
 (def chat-messages [{:name "blue" :message "hello, world"}
@@ -21,6 +30,7 @@
 
 (defroutes app-routes
   (GET "/" [] (generate-message-view chat-messages))
+  (POST "/" [] (generate-message-view chat-messages))
   (route/not-found "Not Found"))
 
 (def app
