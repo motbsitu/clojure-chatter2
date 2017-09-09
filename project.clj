@@ -19,7 +19,7 @@
           :destroy clojure-chatter2.handler/destroy}
 
   :aot :all
-  :main chatter.handler
+  :main clojure-chatter2.handler
   :profiles
   {:dev
    {:dependencies [[javax.servlet/servlet-api "2.5"]
@@ -28,4 +28,4 @@
    {:ring
     {:open-browser? false, :stacktraces? false, :auto-reload? false}
     :env {production true}}}
-  :uberjar-name "chatter-standalone.jar")
+  :uberjar-name "clojure-chatter2-standalone.jar")
