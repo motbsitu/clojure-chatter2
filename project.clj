@@ -1,4 +1,4 @@
-(defproject clojure-chatter2 "0.1.0-SNAPSHOT"
+(defproject clojure_chatter2 "0.1.0-SNAPSHOT"
   :description "Web app to display messages"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
@@ -14,12 +14,12 @@
                  [environ "1.1.0"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-environ "1.0.0"]]
-  :ring {:handler clojure-chatter2.handler/app
-          :init clojure-chatter2.handler/init
-          :destroy clojure-chatter2.handler/destroy}
+  :ring {:handler clojure_chatter2.handler/app
+          :init clojure_chatter2.handler/init
+          :destroy clojure_chatter2.handler/destroy}
 
   :aot :all
-  :main clojure-chatter2.handler
+  :main clojure_chatter2.handler
   :profiles
   {:dev
    {:dependencies [[javax.servlet/servlet-api "2.5"]
@@ -28,4 +28,4 @@
    {:ring
     {:open-browser? false, :stacktraces? false, :auto-reload? false}
     :env {production true}}}
-  :uberjar-name "clojure-chatter2-standalone.jar")
+  :uberjar-name "clojure_chatter2-standalone.jar")

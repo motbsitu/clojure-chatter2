@@ -1,4 +1,4 @@
-(ns clojure-chatter2.handler
+(ns clojure_chatter2.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
@@ -13,7 +13,7 @@
   [messages]
   (page/html5
    [:head
-    [:title "chatter"]]
+    [:title "clojure_chatter2"]]
    [:body
     [:h1 "Our Chat App"]
     [:p

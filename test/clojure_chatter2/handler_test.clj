@@ -1,7 +1,7 @@
-(ns clojure-chatter2.handler-test
+(ns clojure_chatter2.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [clojure-chatter2.handler :refer :all]))
+            [clojure_chatter2.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"

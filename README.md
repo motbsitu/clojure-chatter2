@@ -1,4 +1,4 @@
-# clojure-chatter2
+# clojure_chatter2
 
 Web app to display messages.
 
@@ -21,3 +21,5 @@ Copyright © 2017 clojurebridgemn.org
 
 ## Hiccup
 Vectors are a Clojure data structure used to contain sequences of things, including other vectors. Hiccup uses vectors of keywords to represent sections of HTML.
+
+## Test git
