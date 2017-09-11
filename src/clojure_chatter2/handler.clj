@@ -18,7 +18,7 @@
    [:head
     [:title "clojure_chatter2"]]
    [:body
-    [:h1 "Our Chat App"]
+    [:h1 "Messages"]
     [:p
      (form/form-to
       [:post "/"]
